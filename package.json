@@ -1,0 +1,27 @@
+{
+  "name": "node-live-stream",
+  "version": "1.0.0",
+  "description": "A live streaming app built with node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "samheutmaker@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
+    "nodemon": "^1.8.1",
+    "socket.io": "^1.4.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamHeutmaker/node-live-stream.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SamHeutmaker/node-live-stream/issues"
+  },
+  "homepage": "https://github.com/SamHeutmaker/node-live-stream#readme"
+}

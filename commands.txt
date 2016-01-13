@@ -1,5 +1,16 @@
 avfoundation
 
-ffmpeg -f avfoundation -i video="0x7fc09a4169a0" -vcodec libx264 -tune zerolatency -b 900k -f mpegts udp://10.1.0.102:1234
+ffmpeg -f avfoundation -i video="0x7fc09a4169a0" -vcodec libx264 -tune zerolatency -b 
+900k -f mpegts udp://10.1.0.102:1234
 
-ffmpeg -f avfoundation -pix_fmt nv12 -framerate 30 -i  "0:0" -f mjpeg http://127.0.0.1:3000
+ffmpeg -f avfoundation -framerate 30 -i "0:0" -tune zerolatency -b 900k -f mjpeg udp://127.0.0.1:3000
+
+
+
+// HTTP
+ffmpeg -f avfoundation -framerate 30 -i "0:0" -tune zerolatency -b 5000k -f mjpeg http://127.0.0.1:8888/videoin
+
+
+ffmpeg -f avfoundation -framerate 30 -i "0:0" -b 200k -f mjpeg http://nodestream-57759.onmodulus.net/videoin
+
+http://nodestream-57759.onmodulus.net/

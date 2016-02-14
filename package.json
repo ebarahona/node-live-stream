@@ -1,6 +1,6 @@
 {
   "name": "node-live-stream",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "A live streaming app built with node",
   "main": "index.js",
   "scripts": {

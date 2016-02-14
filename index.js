@@ -10,36 +10,34 @@ var port = process.env.PORT || 8888;
 
 app.use(express.static(__dirname + '/public'));
 
-// 
+//
 app.get('/', function(req, res) {
-	res.redirect('link.html');
-})
-// 
+		res.redirect('link.html');
+	})
+	//
 app.get('/video', function(req, res) {
-  res.redirect('video.html');
+	res.redirect('video.html');
 });
 
-// 
+//
 app.post('/videoin', function(req, res) {
-	  req.on('data', function(data) {
-  		var frame = new Buffer(data).toString('base64');
-    	io.sockets.emit('canvas', frame);
-  });
+	req.on('data', function(data) {
+		var frame = new Buffer(data).toString('base64');
+		io.sockets.emit('canvas', frame);
+	});
 });
 
 http.listen(port, function() {
-  console.log('started');
+	console.log('started');
 });
 
 io.on('connection', function(socket) {
-  socket.on('stream', function(data) {
-    socket.broadcast.emit('stream', data);
-  });
+	socket.on('stream', function(data) {
+		socket.broadcast.emit('stream', data);
+	});
 });
 
-
-
-
+//======== UDP SERVER =====
 
 // var PORT = 3000;
 // var HOST = '127.0.0.1';

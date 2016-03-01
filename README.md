@@ -24,7 +24,7 @@ This will start ffmpeg streaming video to your server. You will most likely see 
 Open up ```http:localhost:8888/video``` and you should see a your video displayed.
 
 ####Notes
-I tried to use solution with a hosted server and did not get decent results. If you are able to get it working, feel free to make pull requst.
+I tried to use this solution with a hosted server and did not get decent results. If you are able to get it working, feel free to make pull requst.
 
 
 
